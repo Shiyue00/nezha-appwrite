@@ -9,5 +9,13 @@
     "start:agent": "node start-server.js",
     "lint": "next lint"
   },
-  // ... dependencies and devDependencies will be here ...
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4"
+  }
 }
