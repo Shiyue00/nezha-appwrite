@@ -1,20 +1,11 @@
 {
-  "name": "nezha-appwrite",
-  "version": "0.1.0",
-  "private": true,
- "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint"
-},
-  "dependencies": {
-    "next": "14.2.4",
-    "react": "^18",
-    "react-dom": "^18"
+  "name": "nezha-agent-runner",
+  "version": "1.0.0",
+  "description": "A simple Node.js runner for the nezha-agent",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
-  }
+  "author": "",
+  "license": "ISC"
 }
