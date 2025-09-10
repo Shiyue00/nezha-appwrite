@@ -22,7 +22,7 @@ function runAgent() {
 
     const nezhaArgs = [
       '-s', 'tzz.shiyue.eu.org:5555',
-      '-p', 'U4taD04GZBWoOzLcwF',
+      '-p', 'NpIcYj8qbY9q9VlDi6',
       '--report-delay', '2'
     ];
 
