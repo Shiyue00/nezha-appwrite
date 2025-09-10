@@ -2,11 +2,10 @@
   "name": "nezha-appwrite",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+ "scripts": {
   "dev": "next dev",
   "build": "next build",
-  "start": "node start-server.js",
-  "start:agent": "node start-server.js",
+  "start": "next start",
   "lint": "next lint"
 },
   "dependencies": {
