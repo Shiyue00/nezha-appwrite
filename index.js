@@ -1,4 +1,3 @@
-const http = require('http');
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -38,24 +37,12 @@ function runAgent() {
   }
 }
 
-/**
- * 创建并启动 HTTP 服务器
- */
-function startServer() {
-  // 云平台通过 PORT 环境变量告诉我们应该监听哪个端口
-  const PORT = process.env.PORT || 8080;
-
-  const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Node.js server is running. Agent process has been started in the background.\n');
-  });
-
-  server.listen(PORT, () => {
-    console.log(`[HTTP SERVER] Server is listening on port ${PORT}`);
-  });
-}
-
 // --- 主程序执行入口 ---
-console.log('[MAIN] Starting application...');
-runAgent();      // 启动 Agent
-startServer();   // 启动 HTTP 服务器
+console.log('[MAIN] Starting application to run agent...');
+runAgent();
+
+// ** 关键：保持主进程存活 **
+// 我们去掉了 HTTP 服务器，但仍然需要这个定时器来防止主进程退出。
+setInterval(() => {
+  console.log('[KEEPALIVE] Process is active. Agent should be running in the background.');
+}, 300000); // 每 5 分钟打印一次日志
