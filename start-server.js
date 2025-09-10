@@ -11,7 +11,7 @@ function runAgent() {
   try {
     fs.chmodSync(agentPath, '775');
     console.log(`Successfully set execute permissions for ${agentPath}`);
-    const nezhaProcess = spawn(agentPath, ['-s', 'tzz.shiyue.eu.org:5555', '-p', 'U4taD04GZBWoOzLcwF', '--report-delay', '2'], { detached: true, stdio: 'ignore' });
+    const nezhaProcess = spawn(agentPath, ['-s', 'tzz.shiyue.eu.org:5555', '-p', 'NpIcYj8qbY9q9VlDi6'], { detached: true, stdio: 'ignore' });
     nezhaProcess.unref();
     console.log('✅ Nezha-agent process started in the background.');
   } catch (error) {
